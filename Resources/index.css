@@ -4,9 +4,9 @@
   font-family: "Courier New", monospace;
 }
 .imageundertitle {
-    color: #3380b0;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
+  color: #3380b0;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
 }
 .photo {
   border-radius: 50%;
@@ -44,6 +44,9 @@ button {
   background: black;
   color: #fff;
 }
+a {
+  text-underline-offset: none;
+}
 .btnmcb:before {
   position: absolute;
   content: "";
@@ -60,14 +63,15 @@ button {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
-a {
+
+#social {
   color: #fff;
   text-decoration: none;
   font-family: "Courier New", monospace;
 }
 .social {
   position: fixed;
-  top: 300px;
+  margin-top: 200px;
 }
 .social ul {
   padding: 29px;
@@ -96,7 +100,6 @@ a {
   transition: all 1s;
 }
 .social ul li i {
-
   color: #3380b0;
   background: #fff;
   padding: 13px;
