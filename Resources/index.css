@@ -1,8 +1,4 @@
-.imageunder {
-  color: white;
-  margin-top: 20px;
-  font-family: "Courier New", monospace;
-}
+
 .imageundertitle {
   color: #3380b0;
   font-family: "Courier New", monospace;
@@ -16,11 +12,11 @@
   position: relative;
   overflow: hidden;
 }
-.about {
+.mainText {
   font-family: "Courier New", monospace;
   color: white;
 }
-.aboutTitle {
+.titleText {
   font-family: "Courier New", monospace;
   color: white;
 }
@@ -70,7 +66,36 @@ a {
 
 hr {
   height: 2px;
+  width: auto;
   border-width: 0;
-  color: white;
-  background-color: white;
+  color: #3380b0;
+  background-color: #3380b0;
 }
+
+/* width */
+::-webkit-scrollbar {
+  /* hide scroll bar */
+  /* display: none; */
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #777;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+/* body{
+  hide scroll bar
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
