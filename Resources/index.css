@@ -29,7 +29,7 @@ button {
   outline: none;
 }
 .custom-btn {
-  width: 130px;
+  width: 137.4px;
   height: 40px;
   border: 2px solid #000;
   font-family: "Courier New", monospace;
@@ -53,7 +53,7 @@ a {
 }
 .btnmcb:before {
   position: absolute;
-  content: "";
+
   display: inline-block;
   top: -180px;
   left: 0;
@@ -66,4 +66,11 @@ a {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: white;
+  background-color: white;
 }
