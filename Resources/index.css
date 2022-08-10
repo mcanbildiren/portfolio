@@ -20,6 +20,10 @@
   font-family: "Courier New", monospace;
   color: white;
 }
+.aboutTitle {
+  font-family: "Courier New", monospace;
+  color: white;
+}
 button {
   margin: 20px;
   outline: none;
