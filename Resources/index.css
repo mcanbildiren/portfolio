@@ -1,9 +1,21 @@
-
-.imageundertitle {
-  color: #3380b0;
-  font-family: "Courier New", monospace;
-  font-weight: bold;
+html{
+  scroll-behavior: smooth;
 }
+
+body {
+  background-color: #222;
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+  filter: invert(49%) sepia(19%) saturate(1563%) hue-rotate(160deg) brightness(87%) contrast(87%);
+}
+
+.container {
+  min-width: 450px;
+}
+
 .photo {
   border-radius: 50%;
   height: 300px;
@@ -12,56 +24,38 @@
   position: relative;
   overflow: hidden;
 }
+
+.imageundertitle {
+  color: #3380b0;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
 .mainText {
   font-family: "Courier New", monospace;
   color: white;
 }
+
 .titleText {
   font-family: "Courier New", monospace;
   color: white;
 }
-button {
+
+.btn-mcb {
   margin: 20px;
-  outline: none;
-}
-.custom-btn {
-  width: 137.4px;
-  height: 40px;
+  color: black;
+  background-color: #3380b0;
+  width: 150px;
+  height: auto;
   border: 2px solid #000;
   font-family: "Courier New", monospace;
   font-weight: 500;
-  background: #3380b0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
 }
-.btnmcb {
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.btnmcb:hover {
-  background: black;
-  color: #fff;
-}
-a {
-  text-underline-offset: none;
-}
-.btnmcb:before {
-  position: absolute;
 
-  display: inline-block;
-  top: -180px;
-  left: 0;
-  width: 30px;
-  height: 100%;
-  background-color: #fff;
-}
-.btnmcb:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+.btn-mcb:hover {
+  color: white;
+  background-color: #000;
+  border: 1px solid white;
 }
 
 hr {
@@ -72,30 +66,18 @@ hr {
   background-color: #3380b0;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  /* hide scroll bar */
-  /* display: none; */
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #222;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #777;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: white;
 }
-
-/* body{
-  hide scroll bar
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-} */

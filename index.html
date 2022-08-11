@@ -29,13 +29,17 @@
     ></script>
     <link rel="stylesheet" href="./Resources/index.css" />
   </head>
-  <body style="background-color: #222">
+  <body>
     <div class="container">
       <!-- photo titles about socials -->
-      <div class="row col-md-12 mt-5">
+      <div class="row mt-5">
         <!-- photo titles -->
-        <div class="col-md-4 offset-md-2 text-center">
-          <img src="./Resources/Photo.jpg" class="img-fluid photo" alt="..." />
+        <div class="col-md-6 text-center">
+          <img
+            src="./Resources/Photo.jpg"
+            class="img-fluid photo"
+            alt="portrait"
+          />
           <h1 class="imageundertitle">Mustafa Can</h1>
           <h1 class="imageundertitle">Bildiren</h1>
           <p class="mainText">Full Stack Web Developer</p>
@@ -61,122 +65,166 @@
           </p>
           <div class="text-center">
             <h1 class="titleText mt-3">Socials</h1>
-            <a href="https://github.com/mcanbildiren"
-              ><img
-                src="./Resources/github.svg"
-                alt=""
-                style="width: 50px; height: auto; margin-right: 25px"
+            <a target="_blank" href="https://github.com/mcanbildiren"
+              ><img src="./Resources/github.svg" alt="github" class="icon mr-4"
             /></a>
-            <a href="https://www.linkedin.com/in/mcanbildiren/"
+            <a target="_blank" href="https://www.linkedin.com/in/mcanbildiren/"
               ><img
                 src="./Resources/linkedin.svg"
-                alt=""
-                style="width: 50px; height: auto; margin-right: 25px"
+                alt="linkedin"
+                class="icon mr-4"
             /></a>
-            <a href="https://www.instagram.com/mcanbildiren/"
+            <a target="_blank" href="https://www.instagram.com/mcanbildiren/"
               ><img
                 src="./Resources/instagram.svg"
-                alt=""
-                style="width: 50px; height: auto"
+                alt="instagram"
+                class="icon"
             /></a>
           </div>
         </div>
       </div>
       <hr />
-      <div class="row col-md-8 offset-md-2 mt-3">
-        <a href="#"><button class="custom-btn btnmcb">Skills</button></a>
-        <a href="#"><button class="custom-btn btnmcb">Education</button></a>
-        <a href="#"><button class="custom-btn btnmcb">Experiences</button></a>
-        <a href="#"><button class="custom-btn btnmcb">Projects</button></a>
+      <div class="row d-flex justify-content-center">
+        <a href="#skills"><button class="btn btn-mcb">Skills</button></a>
+        <a href="#education"><button class="btn btn-mcb">Education</button></a>
+        <a href="#experiences"
+          ><button class="btn btn-mcb">Experiences</button></a
+        >
+        <a href="#projects"><button class="btn btn-mcb">Projects</button></a>
       </div>
-      <hr />
+      <hr id="skills" />
       <div class="row">
         <h1 class="titleText col-md-12">Skills</h1>
         <table class="mainText table table-borderless">
           <tbody>
             <tr>
               <th>Technologies and Frameworks</th>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur, reprehenderit esse non ullam ipsa.</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur aspernatur, reprehenderit esse non ullam ipsa.
+              </td>
             </tr>
             <tr>
               <th>Tools</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam ea adipisci ullam a assumenda?</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid nam ea adipisci ullam a assumenda?
+              </td>
             </tr>
             <tr>
               <th>Database Technologies</th>
-              <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, officia!</td>
+              <td>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusantium, officia!
+              </td>
             </tr>
             <tr>
               <th>Programming Languages</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus maiores provident et nemo, omnis corrupti.</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                maiores provident et nemo, omnis corrupti.
+              </td>
             </tr>
             <tr>
               <th>Concepts and Patterns</th>
-              <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni blanditiis quo, illum deleniti atque maxime.</td>
+              <td>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+                blanditiis quo, illum deleniti atque maxime.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <hr />
+      <hr id="education" />
       <div class="row">
         <h1 class="titleText col-md-12">Education</h1>
         <table class="mainText table table-borderless">
           <tbody>
             <tr>
               <th>January 2022 - June 2022</th>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur, reprehenderit esse non ullam ipsa.</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur aspernatur, reprehenderit esse non ullam ipsa.
+              </td>
             </tr>
             <tr>
               <th>2016-2022</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam ea adipisci ullam a assumenda?</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid nam ea adipisci ullam a assumenda?
+              </td>
             </tr>
             <tr>
               <th>2015-2016</th>
-              <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, officia!</td>
+              <td>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusantium, officia!
+              </td>
             </tr>
             <tr>
               <th>2012-2014</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus maiores provident et nemo, omnis corrupti.</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                maiores provident et nemo, omnis corrupti.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <hr />
+      <hr id="experiences" />
       <div class="row">
         <h1 class="titleText col-md-12">Experiences</h1>
         <table class="mainText table table-borderless">
           <tbody>
             <tr>
               <th>July 2022 - Present</th>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur, reprehenderit esse non ullam ipsa.</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur aspernatur, reprehenderit esse non ullam ipsa.
+              </td>
             </tr>
             <tr>
               <th>September 2020 - Decembcer 2020</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam ea adipisci ullam a assumenda?</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid nam ea adipisci ullam a assumenda?
+              </td>
             </tr>
             <tr>
               <th>July 2019</th>
-              <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, officia!</td>
+              <td>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusantium, officia!
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <hr />
+      <hr id="projects" />
       <div class="row">
         <h1 class="titleText col-md-12">Projects</h1>
         <table class="mainText table table-borderless">
           <tbody>
             <tr>
               <th>E-Commerce Project</th>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur, reprehenderit esse non ullam ipsa.</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur aspernatur, reprehenderit esse non ullam ipsa.
+              </td>
             </tr>
             <tr>
               <th>Technical Service Website Project (In Progrses)</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam ea adipisci ullam a assumenda?</td>
+              <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid nam ea adipisci ullam a assumenda?
+              </td>
             </tr>
             <tr>
               <th>M&M Color Sorter Project (Captsone Project)</th>
-              <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quidem, deserunt cum quia debitis nisi?</td>
+              <td>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
+                quidem, deserunt cum quia debitis nisi?
+              </td>
             </tr>
           </tbody>
         </table>
