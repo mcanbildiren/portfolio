@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -6,10 +6,22 @@ body {
   background-color: #222;
 }
 
+.ghLink {
+  color: #3380b0;
+}
+
+.ghLink:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
 .icon {
   width: 50px;
   height: auto;
-  filter: invert(49%) sepia(19%) saturate(1563%) hue-rotate(160deg) brightness(87%) contrast(87%);
+  filter: invert(49%) sepia(19%) saturate(1563%) hue-rotate(160deg)
+    brightness(87%) contrast(87%);
 }
 
 .container {
@@ -80,4 +92,9 @@ hr {
 
 ::-webkit-scrollbar-thumb:hover {
   background: white;
+}
+
+.at {
+  color: #3380b0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
