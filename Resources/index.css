@@ -53,6 +53,10 @@ body {
   color: white;
 }
 
+ul.list-item {
+  list-style-type: square;
+}
+
 .btn-mcb {
   margin: 20px;
   color: black;
