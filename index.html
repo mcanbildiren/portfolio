@@ -1,323 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Mustafa Can Bildiren</title>
-    <link rel="icon" href="./Resources/comp.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./Resources/index.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Can Bildiren | Backend Software Developer</title>
+    <link rel="icon" href="./Resources/comp.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Resources/index.css">
 </head>
-
 <body>
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-6 text-center">
-            <img src="./Resources/Photo.jpg" class="img-fluid photo" alt="portrait"/>
-            <h1 class="imageundertitle">Mustafa Can</h1>
-            <h1 class="imageundertitle">Bildiren</h1>
-            <p class="mainText">Backend Software Developer</p>
-            <p class="mainText">Electrical and Electronics Engineer</p>
+
+    <header class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span>&#9776;</span>
         </div>
-        <div class="col-md-6">
-            <h1 class="titleText text-center">About</h1>
-            <p class="mainText">
-                Hi! My name is Mustafa Can Bildiren and I am a Backend Software
-                Developer, currently living in Istanbul, Turkey.
-            </p>
-            <p class="mainText">
-                I am a Software Developer with a strong passion for designing scalable, secure, and high-performance systems. With a Master's degree in Computer Engineering and a Bachelor's degree in Electrical and Electronics Engineering, I bring a strong technical foundation and a problem-solving mindset to every project I work on. My primary expertise lies in NET development, microservices architecture and many more , particularly in the fintech sector.
-            </p>
-            <div class="text-center">
-                <h1 class="titleText mt-3">Socials</h1>
-                <a target="_blank" href="https://github.com/mcanbildiren"><img src="./Resources/github.svg" alt="github"
-                                                                               class="icon mr-4"/></a>
-                <a target="_blank" href="https://www.linkedin.com/in/mcanbildiren/"><img src="./Resources/linkedin.svg"
-                                                                                         alt="linkedin"
-                                                                                         class="icon mr-4"/></a>
-                <a target="_blank" href="https://www.instagram.com/mcanbildiren/"><img src="./Resources/instagram.svg"
-                                                                                       alt="instagram"
-                                                                                       class="icon"/></a>
+        <nav class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="hero container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Mustafa Can Bildiren</h1>
+                    <p class="subtitle">Software Developer</p>
+                    <p class="subtitle" style="font-size: 1.2rem; margin-top: -10px;">Electrical and Electronics Engineer</p>
+                    <p>
+                        I’m a Backend Software Developer passionate about building scalable, secure, and high‑performance systems. With a Master’s in Computer Engineering and a Bachelor’s in Electrical and Electronics Engineering, I combine a strong technical foundation with a problem‑solving mindset to deliver impactful solutions.
+                    </p>
+                    <p>
+                        My expertise includes the .NET ecosystem, microservices architecture, and event‑driven systems. I thrive in collaborative environments and am committed to continuous learning to stay at the forefront of backend development.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="https://github.com/mcanbildiren" target="_blank" aria-label="GitHub">
+                            <img src="./Resources/github.svg" alt="GitHub" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/mcanbildiren/" target="_blank" aria-label="LinkedIn">
+                            <img src="./Resources/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/mcanbildiren/" target="_blank" aria-label="Instagram">
+                            <img src="./Resources/instagram.svg" alt="Instagram" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./Resources/Photo.jpg" alt="Mustafa Can Bildiren">
+                </div>
             </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3 class="skill-category">Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">RESTful API Development</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Database Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Architecture &amp; Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Domain-Driven Design (DDD)</span>
+                        <span class="skill-tag">CQRS</span>
+                        <span class="skill-tag">SAGA Design Pattern</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Messaging &amp; Queues</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">MassTransit</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Caching &amp; Performance</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Hangfire</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Logging &amp; Monitoring</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Serilog</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">CI/CD &amp; Version Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Bitbucket</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Cloud &amp; DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Google Cloud</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Security &amp; Quality</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Secure Software Development</span>
+                        <span class="skill-tag">Software Unit Testing</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-category">Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Agile/Scrum Methodologies</span>
+                        <span class="skill-tag">Problem-Solving</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Technical Documentation</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experiences" class="container">
+            <h2 class="section-title">Experiences</h2>
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <div class="timeline-date">November 2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Software Developer</h3>
+                        <p class="company">Istanbul Metropolitan Municipality</p>
+                        <ul>
+                            <li>Developing and maintaining digital platforms used by citizens across Istanbul.</li>
+                            <li>Building and optimizing high-traffic web applications to support large-scale public usage.</li>
+                            <li>Contributing to social assistance and community-focused technology projects within the municipality.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">August 2023 - November 2025</div>
+                    <div class="timeline-content">
+                        <h3>Software Developer</h3>
+                        <p class="company">HangiPara</p>
+                        <ul>
+                            <li>I played a role in the backend development of mobile banking processes such as payment methods, money transfers, and wallet transactions.</li>
+                            <li>I carried out backend software development processes using .Net. By applying Domain-Driven Design principles, I developed microservice architectures that provide high scalability and ease of maintenance.</li>
+                            <li>I played a role in integrating with BKM using CQRS architecture and establishing an open banking and payment order creation structure. In this structure, I used PostgreSQL for write operations and Elasticsearch for read operations.</li>
+                            <li>I managed and successfully implemented integration processes with third-party service providers and developed Proxy APIs in the integration processes.</li>
+                            <li>I contributed to the development and integration of the KYC structure used to verify users' identity information.</li>
+                            <li>I played a role in the development and integration of the AML structure, which queries users registered in the system to prevent money laundering.</li>
+                            <li>I carried out logging operations on Elasticsearch using Serilog.</li>
+                            <li>I developed message-based communication and integration solutions using RabbitMQ and MassTransit.</li>
+                            <li>I used Hangfire to easily create and manage background tasks.</li>
+                            <li>I established a distributed cache structure using Redis.</li>
+                            <li>I used GitLab and Bitbucket for CI/CD processes.</li>
+                            <li>I improved code quality and reliability by writing unit tests.</li>
+                            <li>I actively participated in team collaboration and project management processes using Agile/Scrum methodologies.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">July 2022 - August 2023</div>
+                    <div class="timeline-content">
+                        <h3>Junior Software Developer</h3>
+                        <p class="company">HangiKredi</p>
+                        <ul>
+                            <li>I played a role in backend software development processes on a website that compares banking products.</li>
+                            <li>I managed development processes using .Net. By applying Domain-Driven Design principles, I developed microservice architecture applications that provide high scalability and ease of maintenance.</li>
+                            <li>I worked on performance optimization, improving code quality, and enhancing security standards.</li>
+                            <li>I developed message-based communication solutions using RabbitMQ.</li>
+                            <li>I used Hangfire to easily create and manage background tasks.</li>
+                            <li>I set up the distributed cache structure using Redis.</li>
+                            <li>I used Bitbucket for CI/CD processes.</li>
+                            <li>I increased code quality and reliability by writing unit tests.</li>
+                            <li>I actively participated in project management processes with team collaboration and Agile/Scrum methodologies.</li>
+                            <li>I took responsibility for developing new features and maintaining existing systems.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">July 2019</div>
+                    <div class="timeline-content">
+                        <h3>Quality Assurance Engineer, Internship</h3>
+                        <p class="company">Murat Ticaret</p>
+                        <ul>
+                            <li>I gained experience in using and developing software tools to automate quality control tests in production processes.</li>
+                            <li>I provided support to efforts to ensure and improve quality standards.</li>
+                            <li>I developed my skills in teamwork, problem-solving, and preparing technical documentation.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">August - October 2025</div>
+                    <div class="timeline-content">
+                        <h3>Web Development Instructor</h3>
+                        <p class="company">ALT+TAB Incubation Center (Güngören Municipality)</p>
+                        <ul>
+                            <li>Delivered a comprehensive web development training program focusing on the fundamentals of modern web application development using the MVC architecture.</li>
+                            <li>Taught C# programming fundamentals, HTML, CSS, Git version control, and the basics of how the Internet and web technologies work.</li>
+                            <li>Concluded the program with a capstone project and final presentations showcasing participants’ practical skills.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="education" class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-2">
+                <article class="info-card">
+                    <span class="year">2023 - 2025</span>
+                    <h3>Computer Engineering, Master's Degree</h3>
+                    <p>Bahcesehir University</p>
+                </article>
+                <article class="info-card">
+                    <span class="year">2016 - 2020</span>
+                    <h3>Electrical and Electronics Engineering, Bachelor's Degree</h3>
+                    <p>Bahcesehir University</p>
+                </article>
+                <article class="info-card">
+                    <h3>Additional</h3>
+                    <p>Languages: English (C1), Turkish (Native)</p>
+                    <p>Military Service: Completed</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="achievements" class="container">
+            <h2 class="section-title">Achievements & Certificates</h2>
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <span>GIS Hackathon First Place</span>
+                    <span class="achievement-org">Istanbul Buyuksehir Belediyesi, Smart City Branch Directorate</span>
+                </div>
+                <div class="achievement-item">
+                    <span>Web Development Course</span>
+                    <span class="achievement-org">Bahcesehir University - Wissen Akademie - İŞKUR</span>
+                </div>
+                <div class="achievement-item">
+                    <span>Building Microservices with .NET</span>
+                    <span class="achievement-org">Fatih Çakıroğlu</span>
+                </div>
+                 <div class="achievement-item">
+                    <span>Future AI Summit’24</span>
+                    <span class="achievement-org">Bahcesehir University</span>
+                </div>
+                 <div class="achievement-item">
+                    <span>Secure Software Development</span>
+                    <span class="achievement-org">BlueMark Academy</span>
+                </div>
+                 <div class="achievement-item">
+                    <span>Introduction to Azure Seminar</span>
+                    <span class="achievement-org">Microsoft Student Partners</span>
+                </div>
+                <div class="achievement-item">
+                    <span>Next Generation of Information Technology Seminar</span>
+                    <span class="achievement-org">Bahcesehir University Software and Informatics Student Club</span>
+                </div>
+                <div class="achievement-item">
+                    <span>Ideathon Idea Marathon Seminar</span>
+                    <span class="achievement-org">Yeditepe University</span>
+                </div>
+                <div class="achievement-item">
+                    <span>Google on Campus by Can DEMİREZEN</span>
+                    <span class="achievement-org">Bahcesehir University Leadership and Entrepreneurship Student Club</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mustafa Can Bildiren. All rights reserved.</p>
         </div>
-    </div>
-    <div class="row d-flex justify-content-center">
-        <a>
-            <button onclick="goToSkills()" class="btn btn-mcb">Skills</button>
-        </a>
-        <a>
-            <button onclick="goToExperiences()" class="btn btn-mcb">Experiences</button>
-        </a>
-        <a>
-            <button onclick="goToEducation()" class="btn btn-mcb">Education</button>
-        </a>
-        <a>
-            <button onclick="goToAchievements()" class="btn btn-mcb">Certificates</button>
-        </a>
-    </div>
-    <hr id="skills"/>
-    <div class="row">
-        <h1 class="titleText col-md-12">Skills</h1>
-        <table class="mainText table table-borderless">
-            <tbody>
-            <tr>
-                <th>Technologies and Frameworks</th>
-                <td>
-                    .NET, MVC, RESTful API, Code First + Migrations, Entity Framework Core, Dapper, Distributed Caching,
-                    Serilog, ELK Stack,
-                    AutoMapper, Mapster, Web Sockets, SignalR Core, Hangfire, RabbitMQ, Mass Transit, MediatR, Fluent
-                    Validation
-                </td>
-            </tr>
-            <tr>
-                <th>Tools</th>
-                <td>
-                    Git Version Control, Github, GitLab, Bitbucket, Jenkins, Postman
-                </td>
-            </tr>
-            <tr>
-                <th>Database Technologies</th>
-                <td>PostgreSQL, SQL Server, ElasticSearch, Redis, MongoDB</td>
-            </tr>
-            <tr>
-                <th>Programming Languages</th>
-                <td>C#, CSS, HTML5</td>
-            </tr>
-            <tr>
-                <th>Concepts and Patterns</th>
-                <td>
-                    Microservices Architecture, CQRS Architecture, Clean Architecture, Repository Pattern, Mediator
-                    Pattern, Factory Pattern, Proxy Pattern, N-Tier Architecture, OOP, Clean Code, MVC, SOLID, Unit
-                    Testing
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr id="experiences"/>
-    <div class="row">
-        <h1 class="titleText col-md-12">Experiences</h1>
-        <table class="mainText table table-borderless">
-            <tbody>
-            <tr>
-                <th>August 2023 - Present</th>
-                <td> Junior Software Developer <span class="at">@</span> HangiPara</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <ul class="list-item">
-                        <li>I took part in the backend development of mobile banking processes such as payment methods,
-                            money transfers, wallet transactions.
-                        </li>
-                        <li>
-                            I managed backend software development processes using .Net. By applying domain-driven
-                            architecture principles, I developed microservice architecture applications that provide
-                            high scalability and ease of maintenance.
-                        </li>
-                        <li>I took part in the building of open banking and payment order creation structure by
-                            integrating with BKM using CQRS architecture. In this structure, I used PostgreSQL for write
-                            operations and ElasticSearch databases for read operations.
-                        </li>
-                        <li>I managed and successfully implemented integration processes with 3rd party service
-                            providers. I developed Proxy APIs in integration processes.
-                        </li>
-                        <li>I took part in the development and integration of the KYC structure used to verify user
-                            identity information.
-                        </li>
-                        <li>I took part in the development and integration of the AML structure, which queries users
-                            registered to the system to prevent money laundering.
-                        </li>
-                        <li>I performed logging operations on ElasticSearch with Serilog.</li>
-                        <li>I developed message-based communication and integration solutions using RabbitMQ and
-                            MassTransit.
-                        </li>
-                        <li>I used Hangfire to easily create and manage background tasks.</li>
-                        <li>I set up the distributed cache structure using Redis.</li>
-                        <li>I used Gitlab and Bitbucket for CI/CD processes.</li>
-                        <li>I increased code quality and reliability by writing unit tests.</li>
-                        <li>I actively participated in project management processes with team collaboration and
-                            Agile/Scrum methodologies.
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>July 2022 - August 2023</th>
-                <td>Junior Software Developer <span class="at">@</span> HangiKredi</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <ul class="list-item">
-                        <li>I played a role in backend software development processes on a website that compares banking
-                            products.
-                        </li>
-                        <li>I managed development processes using .Net. By applying domain-driven architecture
-                            principles, I developed microservice architecture applications that provide high scalability
-                            and ease of maintenance.
-                        </li>
-                        <li>I worked on performance optimization, improving code quality, and enhancing security
-                            standards.
-                        </li>
-                        <li>I developed message-based communication solutions using RabbitMQ.</li>
-                        <li>I used Hangfire to easily create and manage background tasks.</li>
-                        <li>I set up the distributed cache structure using Redis.</li>
-                        <li>I used Bitbucket for CI/CD processes.</li>
-                        <li>I increased code quality and reliability by writing unit tests.</li>
-                        <li>I actively participated in project management processes with team collaboration and
-                            Agile/Scrum methodologies.
-                        </li>
-                        <li>I took responsibility for developing new features and maintaining existing systems.</li>
-                    </ul>
+    </footer>
 
-                </td>
-            </tr>
-            <tr>
-                <th>July 2019</th>
-                <td>
-                    Quality Assurance Engineer, Internship <span class="at">@</span> Murat Ticaret Kablo Sanayi
-                    A.Ş.
-                </td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <ul class="list-item">
-                        <li>I gained experience in using and developing software tools to automate quality control tests
-                            in production processes.
-                        </li>
-                        <li>I provided support to efforts to ensure and improve quality standards.</li>
-                        <li>I developed my skills in teamwork, problem-solving, and preparing technical documentation.
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr id="education"/>
-    <div class="row">
-        <h1 class="titleText col-md-12">Education</h1>
-        <table class="mainText table table-borderless">
-            <tbody>
-            <tr>
-                <th>2023-2025</th>
-                <td>
-                    Bahcesehir University, Computer Engineering,
-                    Master's Degree
-                </td>
-            </tr>
-            <tr>
-                <th>2016-2020</th>
-                <td>
-                    Bahcesehir University, Electrical and Electronics Engineering,
-                    Bachelor's Degree
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr id="achievements"/>
-    <div class="row">
-        <h1 class="titleText col-md-12">Achievements & Certificates</h1>
-        <table class="mainText table table-borderless">
-            <tbody>
-            <tr>
-                <th>Istanbul Buyuksehir Belediyesi, Smart City Branch Directorate</th>
-                <td>
-                    GIS Hackathon First Place
-                </td>
-            </tr>
-            <tr>
-                <th>Bahcesehir University - Wissen Akademie - İŞKUR</th>
-                <td>
-                    Web Development Course
-                </td>
-            </tr>
-            <tr>
-                <th>Fatih Çakıroğlu</th>
-                <td>
-                    Building Microservices with .NET
-                </td>
-            </tr>
-            <tr>
-                <th>Bahcesehir University</th>
-                <td>
-                    Future AI Summit’24
-                </td>
-            </tr>
-            <tr>
-                <th>BlueMark Academy</th>
-                <td>
-                    Secure Software Development
-                </td>
-            </tr>
-            <tr>
-                <th>Microsoft Student Partners</th>
-                <td>
-                    Introduction to Azure Seminar
-                </td>
-            </tr>
-            <tr>
-                <th>Bahcesehir University Software and Informatics Student Club</th>
-                <td>
-                    Next Generation of Information Technology Seminar
-                </td>
-            </tr>
-            <tr>
-                <th>Yeditepe University</th>
-                <td>
-                    Ideathon Idea Marathon Seminar
-                </td>
-            </tr>
-            <tr>
-                <th>Bahcesehir University Leadership and Entrepreneurship Student Club</th>
-                <td>
-                    Google on Campus by Can DEMİREZEN
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
-<script>
-    const skills = document.getElementById("skills");
-
-    function goToSkills() {
-        skills.scrollIntoView();
-    }
-
-    const education = document.getElementById("education");
-
-    function goToEducation() {
-        education.scrollIntoView();
-    }
-
-    const experiences = document.getElementById("experiences");
-
-    function goToExperiences() {
-        experiences.scrollIntoView();
-    }
-
-    const achievements = document.getElementById("achievements");
-
-    function goToAchievements() {
-        achievements.scrollIntoView();
-    }
-</script>
-
 </html>
