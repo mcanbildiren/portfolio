@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Instagram, ArrowDown, Sparkles } from 'lucide-react'
+import { Github, Linkedin, Instagram, ArrowDown } from 'lucide-react'
 import { profile } from '../data/content'
 
 const socialIcons = { github: Github, linkedin: Linkedin, instagram: Instagram }
@@ -8,16 +8,6 @@ export default function Hero() {
   return (
     <section id="about" className="relative min-h-screen flex items-center px-4 pt-28 pb-16">
       <div className="mx-auto max-w-3xl w-full text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-medium text-emerald-600 dark:text-emerald-300 mb-6"
-        >
-          <Sparkles size={14} />
-          Available for new opportunities
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
