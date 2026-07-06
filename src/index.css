@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 dark:bg-[#0a0a12] dark:text-slate-100;
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Gradient text helper */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-500;
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-500/40 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-emerald-500/70;
+}
+
+/* Dot grid background */
+.grid-bg {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.18) 1.3px, transparent 1.3px);
+  background-size: 22px 22px;
+  background-position: -11px -11px;
+}
+
+.dark .grid-bg {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.14) 1.3px, transparent 1.3px);
+}
