@@ -1,7 +1,8 @@
 export const profile = {
   name: 'Mustafa Can Bildiren',
   title: 'Backend Software Developer',
-  subtitles: ['Software Developer', 'Electrical & Electronics Engineer'],
+  subtitles: ['Software Developer'],
+  tagline: 'I build scalable, secure backend systems with .NET, microservices, and event-driven architecture.',
   bio: [
     "I'm a Backend Software Developer passionate about building scalable, secure, and high-performance systems. With a Master's in Computer Engineering and a Bachelor's in Electrical and Electronics Engineering, I combine a strong technical foundation with a problem-solving mindset to deliver impactful solutions.",
     'My expertise includes the .NET ecosystem, microservices architecture, and event-driven systems. I thrive in collaborative environments and am committed to continuous learning to stay at the forefront of backend development.',

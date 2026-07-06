@@ -37,9 +37,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-6 mx-auto max-w-2xl text-slate-600 dark:text-slate-300 leading-relaxed"
+          className="mt-6 mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
         >
-          {profile.bio[0]}
+          {profile.tagline}
         </motion.p>
 
         <motion.div
