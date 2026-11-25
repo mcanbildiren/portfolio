@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 
 const links = [
@@ -10,97 +9,99 @@ const links = [
   { href: '#achievements', label: 'Achievements' },
 ]
 
-export default function Navbar({ theme, toggle }) {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
-
+function useActiveSection() {
+  const [active, setActive] = useState('#about')
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    const els = links.map((l) => document.querySelector(l.href)).filter(Boolean)
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(`#${e.target.id}`)
+        })
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    els.forEach((el) => io.observe(el))
+    return () => io.disconnect()
   }, [])
+  return active
+}
+
+export default function Navbar({ theme, toggle }) {
+  const [open, setOpen] = useState(false)
+  const active = useActiveSection()
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed top-0 inset-x-0 z-50"
-    >
-      <div
-        className={`mx-auto max-w-6xl px-4 mt-3 flex items-center justify-between rounded-2xl transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-lg shadow-emerald-500/5 py-2.5'
-            : 'bg-transparent border border-transparent py-3.5'
-        }`}
-      >
-        <a href="#about" className="font-mono font-bold text-lg tracking-tight">
-          <span className="text-gradient">MCB</span>
-          <span className="text-emerald-500">.</span>
+    <header className="fixed top-0 inset-x-0 z-50 bg-bg border-b border-line">
+      <div className="mx-auto max-w-7xl flex items-stretch h-14 md:border-x border-line">
+        <a
+          href="#about"
+          className="flex items-center gap-2 px-4 md:px-6 border-r border-line font-display text-2xl leading-none uppercase"
+        >
+          MCB
+          <span className="h-2.5 w-2.5 bg-fg" aria-hidden />
         </a>
 
-        <nav className="hidden md:flex items-center gap-1">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-white hover:bg-emerald-500/10 transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+        <nav className="hidden md:flex flex-1 items-stretch">
+          {links.map((l, i) => {
+            const isActive = active === l.href
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                aria-current={isActive ? 'true' : undefined}
+                className={`flex items-center gap-2 px-4 lg:px-5 border-r border-line br-label transition-colors duration-75 ${
+                  isActive ? 'bg-inv text-inv-fg' : 'hover:bg-deep'
+                }`}
+              >
+                <span className={`font-mono ${isActive ? 'text-inv-muted' : 'text-muted'}`}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                {l.label}
+              </a>
+            )
+          })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-1 md:flex-none items-stretch justify-end">
           <button
             onClick={toggle}
-            aria-label="Toggle theme"
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-emerald-500/10 transition-colors"
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            className="grid place-items-center w-14 border-l border-line hover:bg-inv hover:text-inv-fg transition-colors duration-75"
           >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={theme}
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="block"
-              >
-                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-              </motion.span>
-            </AnimatePresence>
+            {theme === 'dark' ? <Sun size={18} strokeWidth={2} /> : <Moon size={18} strokeWidth={2} />}
           </button>
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-emerald-500/10 transition-colors"
+            aria-expanded={open}
+            className="md:hidden grid place-items-center w-14 border-l border-line hover:bg-inv hover:text-inv-fg transition-colors duration-75"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.nav
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mx-4 mt-2 rounded-2xl bg-white/90 dark:bg-[#12121c]/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-2 shadow-xl"
-          >
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-emerald-500/10"
-              >
+      {open && (
+        <nav className="md:hidden border-t border-line bg-bg">
+          {links.map((l, i) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className={`flex items-center justify-between h-12 px-4 border-b border-line last:border-b-0 br-label ${
+                active === l.href ? 'bg-inv text-inv-fg' : ''
+              }`}
+            >
+              <span className="flex items-center gap-3">
+                <span className="font-mono opacity-60">{String(i + 1).padStart(2, '0')}</span>
                 {l.label}
-              </a>
-            ))}
-          </motion.nav>
-        )}
-      </AnimatePresence>
-    </motion.header>
+              </span>
+              <span aria-hidden>→</span>
+            </a>
+          ))}
+        </nav>
+      )}
+    </header>
   )
 }

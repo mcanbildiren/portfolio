@@ -1,6 +1,5 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useTheme } from './hooks/useTheme'
-import Background from './components/Background'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
@@ -18,9 +17,9 @@ export default function App() {
     <>
       <motion.div
         style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 z-[60] h-1 origin-left bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-500"
+        className="fixed top-0 left-0 right-0 z-[60] h-1 origin-left bg-fg"
+        aria-hidden
       />
-      <Background />
       <Navbar theme={theme} toggle={toggle} />
       <main>
         <Hero />

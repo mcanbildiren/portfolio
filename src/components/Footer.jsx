@@ -1,45 +1,51 @@
-import { Github, Linkedin, Instagram, Mail, ArrowUp } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 import { profile } from '../data/content'
+import { Shell } from './Section'
 
-const socialIcons = { github: Github, linkedin: Linkedin, instagram: Instagram }
+const labels = { github: 'GitHub', linkedin: 'LinkedIn', instagram: 'Instagram' }
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-slate-200 dark:border-white/10 py-12 px-4">
-      <div className="mx-auto max-w-6xl flex flex-col items-center gap-6 text-center">
-        <a href="#about" className="font-mono font-bold text-2xl">
-          <span className="text-gradient">MCB</span>
-          <span className="text-emerald-500">.</span>
-        </a>
-
-        <div className="flex items-center gap-3">
-          {Object.entries(profile.socials).map(([key, url]) => {
-            const Icon = socialIcons[key]
-            return (
-              <a
-                key={key}
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={key}
-                className="p-3 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:text-white hover:bg-emerald-500 hover:border-emerald-500 transition-all hover:scale-110"
-              >
-                <Icon size={18} />
-              </a>
-            )
-          })}
-        </div>
-
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          © {new Date().getFullYear()} {profile.name}. All rights reserved.
-        </p>
-
+    <footer className="bg-inv text-inv-fg">
+      <Shell className="pt-16 md:pt-24">
+        <p className="br-label text-inv-muted">■ Get in touch</p>
         <a
           href="#about"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-500 hover:text-emerald-600"
+          className="mt-4 block font-display uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,9vw,8rem)]"
         >
-          <ArrowUp size={15} /> Back to top
+          {profile.name}
         </a>
+      </Shell>
+
+      <Shell className="mt-12 md:mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-[repeat(3,1fr)_auto] border-t border-l border-inv-line">
+          {Object.entries(profile.socials).map(([key, url]) => (
+            <a
+              key={key}
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-between gap-4 px-4 h-16 border-b md:border-b-0 border-r border-inv-line br-label transition-colors duration-75 hover:bg-inv-fg hover:text-inv"
+            >
+              {labels[key] || key}
+              <span aria-hidden>↗</span>
+            </a>
+          ))}
+          <a
+            href="#about"
+            aria-label="Back to top"
+            className="flex items-center justify-center gap-3 px-6 h-16 bg-lime text-ink br-label hover:bg-[#C6E625] active:translate-y-px"
+          >
+            Top <ArrowUp size={16} strokeWidth={2} />
+          </a>
+        </div>
+      </Shell>
+
+      <div className="border-t border-inv-line">
+        <Shell className="flex flex-wrap justify-between gap-2 py-4 text-micro font-semibold uppercase text-inv-muted">
+          <span>© {new Date().getFullYear()} {profile.name}</span>
+          <span>{profile.title}</span>
+        </Shell>
       </div>
     </footer>
   )

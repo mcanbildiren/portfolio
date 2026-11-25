@@ -2,51 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Brutalist UI tokens ─────────────────────────────────────────── */
 :root {
-  color-scheme: light dark;
+  --br-bg: #EEEDE8;          /* paper */
+  --br-bg-deep: #E3E2DC;     /* paperDeep */
+  --br-surface: #F7F7F3;
+  --br-fg: #0A0A0A;          /* ink */
+  --br-line: #0A0A0A;        /* 1px hairlines */
+  --br-line-soft: #CFCEC8;
+  --br-muted: #6B6A64;
+  --br-inv-bg: #0A0A0A;      /* inverted panels */
+  --br-inv-fg: #FFFFFF;
+  --br-inv-line: #2C2C2C;
+  --br-inv-muted: #8C8B85;
+  --br-focus: #0A0A0A;
+  --br-grain-opacity: .05;
+  color-scheme: light;
+}
+
+.dark {
+  --br-bg: #0A0A0A;
+  --br-bg-deep: #161616;
+  --br-surface: #161616;
+  --br-fg: #EEEDE8;
+  --br-line: #2C2C2C;
+  --br-line-soft: #2C2C2C;
+  --br-muted: #8C8B85;
+  --br-inv-bg: #EEEDE8;
+  --br-inv-fg: #0A0A0A;
+  --br-inv-line: #0A0A0A;
+  --br-inv-muted: #6B6A64;
+  --br-focus: #D4F536;
+  --br-grain-opacity: .08;
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 56px;
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 dark:bg-[#0a0a12] dark:text-slate-100;
-  font-feature-settings: 'cv11', 'ss01';
+  background-color: var(--br-bg);
+  color: var(--br-fg);
+  font-family: Inter, Archivo, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Gradient text helper */
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-500;
+/* Paper grain — texture, not depth */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--br-grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.animated-gradient {
-  background-size: 200% 200%;
+::selection {
+  background: #D4F536;
+  color: #0A0A0A;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-emerald-500/40 rounded-full;
-}
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-emerald-500/70;
+:focus-visible {
+  outline: 2px solid var(--br-focus);
+  outline-offset: 2px;
 }
 
-/* Dot grid background */
-.grid-bg {
-  background-image: radial-gradient(rgba(16, 185, 129, 0.18) 1.3px, transparent 1.3px);
-  background-size: 22px 22px;
-  background-position: -11px -11px;
+/* ── Components ──────────────────────────────────────────────────── */
+@layer components {
+  .br-label {
+    @apply text-label font-bold uppercase;
+  }
+  .br-micro {
+    @apply text-micro font-semibold uppercase text-muted;
+  }
+
+  .br-btn {
+    @apply inline-flex items-center justify-center gap-3 min-h-[44px] px-5 border border-line
+           text-label12 font-bold uppercase transition-colors duration-75 active:translate-y-px;
+  }
+  .br-btn--primary {
+    @apply bg-inv text-inv-fg border-inv hover:bg-[#262626] dark:hover:bg-white;
+  }
+  .br-btn--secondary {
+    @apply bg-transparent text-fg hover:bg-inv hover:text-inv-fg;
+  }
+  .br-btn--accent {
+    @apply bg-lime text-ink border-ink hover:bg-[#C6E625];
+  }
+
+  .br-icon-btn {
+    @apply inline-grid place-items-center h-11 w-11 border border-line text-fg
+           transition-colors duration-75 hover:bg-inv hover:text-inv-fg active:translate-y-px;
+  }
+
+  .br-tag {
+    @apply inline-flex items-center px-2 py-1 border border-line text-micro font-semibold uppercase;
+  }
+
+  .br-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 7px;
+    background: currentColor;
+    margin-bottom: 8px;
+  }
+
+  .br-img {
+    filter: grayscale(1) contrast(1.05);
+  }
 }
 
-.dark .grid-bg {
-  background-image: radial-gradient(rgba(16, 185, 129, 0.14) 1.3px, transparent 1.3px);
+/* Scrollbar: square, ink */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--br-bg); border-left: 1px solid var(--br-line); }
+::-webkit-scrollbar-thumb { background: var(--br-fg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

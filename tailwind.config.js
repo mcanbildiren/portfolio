@@ -1,41 +1,39 @@
 /** @type {import('tailwindcss').Config} */
+// Brutalist UI tokens. Theme-dependent colors resolve through CSS variables
+// declared in src/index.css so `dark` mode flips paper <-> ink.
 export default {
   darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
       colors: {
-        brand: {
-          50: '#eef2ff',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-        },
+        bg: 'var(--br-bg)',
+        deep: 'var(--br-bg-deep)',
+        surface: 'var(--br-surface)',
+        fg: 'var(--br-fg)',
+        line: 'var(--br-line)',
+        soft: 'var(--br-line-soft)',
+        muted: 'var(--br-muted)',
+        inv: { DEFAULT: 'var(--br-inv-bg)', fg: 'var(--br-inv-fg)', line: 'var(--br-inv-line)', muted: 'var(--br-inv-muted)' },
+        lime: '#D4F536',
+        violet: '#6B46FF',
+        danger: '#FF3B1F',
+        ink: '#0A0A0A',
+        paper: '#EEEDE8',
       },
-      animation: {
-        'gradient-x': 'gradient-x 8s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'blob': 'blob 12s infinite',
+      fontFamily: {
+        display: ['Anton', '"Archivo Narrow"', '"Barlow Condensed"', 'Oswald', 'sans-serif'],
+        sans: ['Inter', 'Archivo', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        mono: ['"JetBrains Mono"', '"Space Mono"', 'ui-monospace', 'monospace'],
       },
-      keyframes: {
-        'gradient-x': {
-          '0%, 100%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-14px)' },
-        },
-        blob: {
-          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-          '33%': { transform: 'translate(30px, -40px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
-        },
+      fontSize: {
+        micro: ['10px', { lineHeight: '1.2', letterSpacing: '0.06em' }],
+        label: ['11px', { lineHeight: '1.2', letterSpacing: '0.08em' }],
+        label12: ['12px', { lineHeight: '1.2', letterSpacing: '0.08em' }],
+        figure: ['44px', { lineHeight: '1' }],
       },
+      borderRadius: { none: '0', DEFAULT: '0' },
+      boxShadow: { none: 'none' },
     },
   },
   plugins: [],
