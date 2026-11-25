@@ -24,6 +24,7 @@ export default {
       fontFamily: {
         display: ['Anton', '"Archivo Narrow"', '"Barlow Condensed"', 'Oswald', 'sans-serif'],
         sans: ['Inter', 'Archivo', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        name: ['Oswald', '"Barlow Condensed"', '"Archivo Narrow"', 'sans-serif'],
         mono: ['"JetBrains Mono"', '"Space Mono"', 'ui-monospace', 'monospace'],
       },
       fontSize: {

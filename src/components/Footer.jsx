@@ -11,7 +11,7 @@ export default function Footer() {
         <p className="br-label text-inv-muted">■ Get in touch</p>
         <a
           href="#about"
-          className="mt-4 block font-display uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,9vw,8rem)]"
+          className="mt-4 block font-name font-medium uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(3rem,9vw,8rem)]"
         >
           {profile.name}
         </a>
@@ -19,13 +19,13 @@ export default function Footer() {
 
       <Shell className="mt-12 md:mt-16">
         <div className="grid grid-cols-2 md:grid-cols-[repeat(3,1fr)_auto] border-t border-l border-inv-line">
-          {Object.entries(profile.socials).map(([key, url]) => (
+          {Object.entries(profile.socials).map(([key, url], i) => (
             <a
               key={key}
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center justify-between gap-4 px-4 h-16 border-b md:border-b-0 border-r border-inv-line br-label transition-colors duration-75 hover:bg-inv-fg hover:text-inv"
+              className={`group flex items-center justify-between gap-4 px-4 h-16 border-r border-inv-line ${i < 2 ? 'border-b md:border-b-0' : ''} br-label transition-colors duration-75 hover:bg-inv-fg hover:text-inv`}
             >
               {labels[key] || key}
               <span aria-hidden>↗</span>
@@ -34,7 +34,7 @@ export default function Footer() {
           <a
             href="#about"
             aria-label="Back to top"
-            className="flex items-center justify-center gap-3 px-6 h-16 bg-lime text-ink br-label hover:bg-[#C6E625] active:translate-y-px"
+            className="flex items-center justify-center gap-3 px-6 h-16 border-r border-inv-line bg-lime text-ink br-label hover:bg-[#C6E625] active:translate-y-px"
           >
             Top <ArrowUp size={16} strokeWidth={2} />
           </a>

@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <section id="about" className="relative pt-14">
-      <Shell className="relative pt-10 md:pt-16">
+      <Shell className="relative flex flex-col justify-center md:justify-start min-h-[calc(100svh-3.5rem)] pt-10 md:pt-16 pb-10 md:pb-16">
         <Crosshair className="left-1 top-3 md:left-3" />
         <Crosshair className="right-1 top-3 md:right-3" />
 
@@ -50,7 +50,7 @@ export default function Hero() {
 
         <motion.h1
           {...fade(0.05)}
-          className="mt-6 font-display uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3.5rem,13vw,13rem)]"
+          className="mt-6 font-name font-medium uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(3.5rem,13vw,13rem)]"
         >
           {lineOne}
           <br />
@@ -58,17 +58,13 @@ export default function Hero() {
           <span className="text-muted">.</span>
         </motion.h1>
 
-        <div className="mt-8 md:mt-12 grid grid-cols-12 gap-4 md:gap-8 items-end">
+        <div className="mt-8 md:mt-auto md:pt-12 grid grid-cols-12 gap-4 md:gap-8 items-center">
           <div className="col-span-12 lg:col-span-7">
             <motion.div {...fade(0.12)}>
               <span className="inline-block bg-lime text-ink px-3 py-2 font-extrabold uppercase tracking-[0.04em] text-sm md:text-base">
                 {profile.title}
               </span>
             </motion.div>
-
-            <motion.p {...fade(0.18)} className="mt-6 max-w-xl text-base md:text-lg leading-[1.45]">
-              {profile.tagline}
-            </motion.p>
           </div>
 
           <motion.div
@@ -99,7 +95,7 @@ export default function Hero() {
         </div>
       </Shell>
 
-      <Shell className="mt-12 md:mt-20 pb-12 md:pb-16">
+      <Shell className="pb-12 md:pb-16">
         <motion.div
           {...fade(0.3)}
           className="grid grid-cols-2 lg:grid-cols-4 border-t border-l border-line"
